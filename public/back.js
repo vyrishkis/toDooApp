@@ -9,7 +9,7 @@ ourForm.addEventListener("submit",(e)=>{
 
 function createItem(x){
  
- let ourHTML = `<li class="w-96 mt-5"> ${x} <button onclick="deleteItem()" class="pl-100 bg-gray-200 border-2 border-gray-600 float-right mr-5" onclick="deleteItem()">Delete</button></li>`
+ let ourHTML = `<li class="w-96 mt-5"> ${x} <button onclick="deleteItem(this)" class="pl-100 bg-gray-200 border-2 border-gray-600 float-right mr-5" onclick="deleteItem()">Delete</button></li>`
  
  ourList.insertAdjacentHTML("beforeend",ourHTML)
  ourField.value = ""  //išvalo įvesties langelį
@@ -17,7 +17,10 @@ function createItem(x){
 
 }
 
-function deleteItem() {
-  alert("delete request")
+function deleteItem(toDelete) {        //f-cija turinio trynimui
+
+  
+  toDelete.parentElement.remove()
+
   
 }
