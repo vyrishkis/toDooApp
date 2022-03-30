@@ -1,0 +1,56 @@
+Tailwind setup
+
+
+Projekto branduolys su index.html ir kiti  su bus  public folderyje.
+
+    • Prieš pradedant nustatom node projekto nustatymų  jsona
+
+		npm inti -y 
+
+    • Instaliojam tailwind
+
+		npm install -D tailwindcss
+
+    • Kuriam tailwind configa
+
+		npx tailwindcss init
+
+    • Kuriam src/inpust.css
+
+		tailwind.config.js faile papildom content eilute 
+
+		["./public/index.html",
+		'./pages/**/*.{html,js}']
+
+    • Kuriam /src folderį su styles.css failu viduje
+
+		I src/styles.css pastinam 	
+
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+    • komandinej eilutej exekutinam (pirmas kelias)
+              (tokiu būdu įvyks nuolatinis input stebėjimas ir keitimas)  
+		npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch
+		/src/styles.css  inputas   /public/styles.css outputas
+
+    • Keičiam package.json “scripts” vidų . Trinam test metoda.
+
+		Keičiam į "build-css": "tailwindcss build -i src/styles.css -o 												public/styles.css"
+		Kad atsinaujintų output.css 
+							npm run build-css
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
