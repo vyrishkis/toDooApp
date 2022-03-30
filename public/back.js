@@ -1,10 +1,14 @@
-let ourForm = document.getElementById("ourForm")
+let ourForm = document.getElementById("ourForm") //gaunamas objektas pagal atributoID
+
 let ourField = document.getElementById("ourField")
+
+
 let ourList = document.getElementById("ourList")
 
 ourForm.addEventListener("submit",(e)=>{
   e.preventDefault() // neleidzhia siusti duomenu i serveri
   createItem(ourField.value)
+
 })
 
 function createItem(x){
@@ -20,7 +24,7 @@ function createItem(x){
 function deleteItem(toDelete) {        //f-cija turinio trynimui
 
   
-  toDelete.parentElement.remove()
+  toDelete.parentElement.remove() //iš mygtukos perduotas this(toDelete) nusitaikom į tėvinį elementą ir remove()
 
   
 }
