@@ -1,2 +1,2 @@
 # toDooApp
-https://vyrishkis.github.io/toDooApp/
+https://vyrishkis.github.io/toDooApp/public
